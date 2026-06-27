@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             TsmPrincipal = new MenuStrip();
             MenuItemArquivo = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
@@ -74,6 +75,7 @@
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             clientesToolStripMenuItem.Size = new Size(120, 22);
             clientesToolStripMenuItem.Text = "Clientes";
+            clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
             // técnicosToolStripMenuItem
             // 
@@ -99,7 +101,7 @@
             MenuItemConectar.Name = "MenuItemConectar";
             MenuItemConectar.Size = new Size(67, 20);
             MenuItemConectar.Text = "Conectar";
-            MenuItemConectar.Click += this.MenuItemConectar_Click;
+            MenuItemConectar.Click += MenuItemConectar_Click;
             // 
             // FrmPrincipal
             // 
@@ -107,6 +109,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(TsmPrincipal);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = TsmPrincipal;
             Name = "FrmPrincipal";
